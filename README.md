@@ -51,4 +51,14 @@
 ### User Interactionn and state
 
 - in order to use State in React we have a function provided by React which is is useState().
--
+- Lifting State up, Sometimes, you want the state of two components to always change together. To do it, remove state from both of them, move it to their closest common parent, and then pass it down to them via props.
+- the idea of passing data around parent components.
+
+```
+                                    <APP/>
+                              ________|_________
+                             |                  |
+                        <Expenses/>        <NewExpenses>
+
+- lifting up the state from <NewExpenses/> to the <App/>
+```

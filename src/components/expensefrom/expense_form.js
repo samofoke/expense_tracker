@@ -49,6 +49,9 @@ const ExpenseForm = () => {
     };
 
     console.log(expenseDaata);
+    setEnterTitle("");
+    setEnteredAmount("");
+    setFormDate("");
   };
 
   //ways to approach change handler for all useState
@@ -70,7 +73,7 @@ const ExpenseForm = () => {
           <label>Title</label>
           <input
             type="text"
-            // value={expenseForm.title}
+            value={enterTitle}
             onChange={titleChangerHandler}
             // onChange={(event) =>
             //   inputChangeHandler("title", event.target.value)
@@ -83,7 +86,7 @@ const ExpenseForm = () => {
             type="number"
             min="0.01"
             step="0.01"
-            // value={expenseForm.amount}
+            value={enteredAmount}
             onChange={amountChangeHandler}
           />
         </div>
@@ -93,7 +96,7 @@ const ExpenseForm = () => {
             type="date"
             min="2019-01-01"
             max="2023-12-31"
-            // value={expenseForm.date}
+            value={formDate}
             onChange={dateChangeHandler}
           />
         </div>
